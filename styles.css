@@ -146,7 +146,7 @@ body {
   display: flex;
   width: 500px;
   height: calc(80vh - 20px);
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 #scroll-box::-webkit-scrollbar {
@@ -161,9 +161,17 @@ body {
   overflow: hidden;
 }
 
+.project-tile > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
 .project-embed {
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 /* CONTACTO */
