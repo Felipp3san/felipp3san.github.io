@@ -161,7 +161,7 @@ body {
   overflow: hidden;
 }
 
-.project-tile > a {
+.project-anchor {
   display: inline-block;
   width: 100%;
   height: 100%;
