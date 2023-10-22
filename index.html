@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/74ff40f749.js" crossorigin="anonymous"></script>
+    <title>Felippe Santana</title>
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <a id="nav-link" href="#">Sobre</a>
+            <a id="nav-link" href="#projects">Projetos</a>
+            <a id="nav-link" href="#footer">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome-section">
+            <div id="picture-container">
+                <img id="picture" src="https://lh3.googleusercontent.com/pw/ADCreHcKv8lTAJiQBk4DiJdeWjsWVRqf6d3R9DaStjCc8pQUcMRdfAcHXgBw9HC8Yk-CqEMURKo9k14uzAnfuJB01TmNVVlb3t6E5a_6ap-K0jjKixQuy8EH=w2400" alt="Foto de Perfil">
+            </div>
+            <div id="info-container">
+                <h1 id="name">Felippe Santana</h1>
+                <p id="role">Estudante</p> 
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Meus Projetos</h2>
+            <div id="buttons-scrollbox">
+                <button id="scroll-left" class="scroll left"><</button>
+                <div id="scroll-box">
+                    <!-- <div class="project-tile"><a href="./Projeto1/index.html" target="_blank"><img class="project-img" src="./Projeto1/formulario.png" alt=""></a></div> -->
+                    <div class="project-tile"><a href="./Projeto1/index.html" target="_blank"><embed class="project-embed" type="text/html" src="./Projeto1/index.html"></a></div> 
+                    <div class="project-tile"><a href="./Projeto2/index.html" target="_blank"><embed class="project-embed" type="text/html" src="./Projeto2/index.html"></a></div>
+                    <div class="project-tile"><a href="./Projeto3/index.html" target="_blank"><embed class="project-embed" type="text/html" src="./Projeto3/index.html"></a></div>
+                    <div class="project-tile"><a href="./Projeto4/index.html" target="_blank"><embed class="project-embed" type="text/html" src="./Projeto4/index.html"></a></div>
+                </div>
+                <button id="scroll-left-media" class="scroll left"><</button>
+                <button id="scroll-right" class="scroll right">></button>
+            </div>
+            
+        </section>
+
+        <section id="contact">
+            <div id="contact-container">
+                <div id="message">
+                    <h2>Vamos Trabalhar Juntos</h2>
+                    <hr>
+                </div>
+                <div id="contact-links">
+                    <a id="profile-link" class="contact-details" href="https://www.linkedin.com/in/felippe-santana-58638b66/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i> LinkedIn</a>
+                    <a class="contact-details" href="https://github.com/Felipp3san" target="_blank"><i class="fa-brands fa-square-github" style="color: #ffffff;"></i> GitHub</a>
+                    <a class="contact-details" href="mailto:f-elipp-3@hotmail.com"><i class="fa-solid fa-at" style="color: #ffffff;"></i> Email</a>
+                    <a class="contact-details" href="tel:+351914046960"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> Contacto</a> 
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <a href="#navbar"><button id="footer-button">Retornar</button></a>
+            <p id="footer-info">© Criado por Felippe De Almeida Santana</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    const buttonLeft = document.getElementById('scroll-left')
+    const buttonLeftMedia = document.getElementById('scroll-left-media')
+    const buttonRight = document.getElementById('scroll-right')
+    var scrollBox = document.getElementById('scroll-box')
+
+    var positionInfo = scrollBox.getBoundingClientRect();
+    var height = positionInfo.height;
+    var width = positionInfo.width;
+    
+    window.addEventListener("resize", (event) => {
+        positionInfo = scrollBox.getBoundingClientRect();
+        height = positionInfo.height;
+        width = positionInfo.width; 
+    });
+
+    buttonLeft.onclick = function (event) {
+        scrollBox.scrollLeft -= width;
+    };
+
+    buttonLeftMedia.onclick = function (event) {
+        scrollBox.scrollLeft -= width;
+    };
+
+    buttonRight.onclick = function (event) {
+        scrollBox.scrollLeft += width;
+    };
+</script>
